@@ -20,5 +20,9 @@ class Node {
     this.nextNode = nextNode;
   }
 
+  set index(index) {
+    this.index = index;
+  }
+
   
 }

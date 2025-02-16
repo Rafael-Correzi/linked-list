@@ -4,13 +4,20 @@ class LinkedList {
     this.head = null;
     this.tail = null;
     this.nodeCount = 0;
+    this.nodes = {};
   }
+
+
 
   append(value) {
     if (this.head === null) {
       this.head = value;
     }
+    if (this.tail !== null) {
+      this.tail.nextNode(value);
+    }
     this.tail = value;
+    this.nodes[this.nodeCount] = value; 
     this.nodeCount++;
   }
 
@@ -18,7 +25,10 @@ class LinkedList {
     if (this.tail === null) {
       this.tail = value;
     }
+    value.nextNode(this.head);
     this.head = value;
+    this.nodes[0] = value;
+    this.shiftAllRight();
     this.nodeCount++;
   }
 
@@ -35,7 +45,7 @@ class LinkedList {
   }
   
   at(index) {
-    return
+    return this.nodes[index];
   }
 }
 
