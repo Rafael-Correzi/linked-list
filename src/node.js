@@ -1,4 +1,3 @@
-
 class Node {
   constructor(value = null, nextNode = null) {
     this.value = value;
@@ -20,4 +19,6 @@ class Node {
   set nextNode(nextNode) {
     this.nextNode = nextNode;
   }
+
+  
 }

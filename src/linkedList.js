@@ -1,36 +1,41 @@
 class LinkedList {
-  constructor(node) {
-    this.node = node;
+  constructor(list) {
+    this.list = list;
+    this.head = null;
+    this.tail = null;
+    this.nodeCount = 0;
   }
 
-  get node() {
-    return this.node;
+  append(value) {
+    if (this.head === null) {
+      this.head = value;
+    }
+    this.tail = value;
+    this.nodeCount++;
   }
 
-  set node(node) {
-    this.node = node;
+  prepend(value) {
+    if (this.tail === null) {
+      this.tail = value;
+    }
+    this.head = value;
+    this.nodeCount++;
+  }
+
+  get size() {
+    return this.nodeCount;
+  }
+
+  get head() {
+    return this.head;
+  }
+  
+  get tail() {
+    return this.tail;
+  }
+  
+  at(index) {
+    return
   }
 }
 
-class Node {
-  constructor(value = null, nextNode = null) {
-    this.value = value;
-    this.nextNode = nextNode;
-  }
-
-  get value() {
-    return this.value;
-  }
-
-  get nextNode() {
-    return this.nextNode;
-  }
-
-  set value(value) {
-    this.value = value;
-  }
-
-  set nextNode(nextNode) {
-    this.nextNode = nextNode;
-  }
-}
