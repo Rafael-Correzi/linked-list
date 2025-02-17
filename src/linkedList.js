@@ -118,3 +118,4 @@ console.log(list1.toString);
 console.log(node1);
 console.log(list1.find("Jhon"));
 console.log(list1.contains("Mary"));
+console.log(list1.at(1));
