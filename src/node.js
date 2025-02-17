@@ -1,28 +1,25 @@
 class Node {
-  constructor(value = null, nextNode = null) {
-    this.value = value;
-    this.nextNode = nextNode;
+  constructor(value, nextNode) {
+    this._value = value;
+    this._nextNode = nextNode;
   }
 
-  get value() {
+  get getValue() {
     return this.value;
   }
 
-  get nextNode() {
+  get getNextNode() {
     return this.nextNode;
   }
 
-  set value(value) {
-    this.value = value;
+  set setValue(val) {
+    this.value = val;
   }
 
-  set nextNode(nextNode) {
-    this.nextNode = nextNode;
+  set setNextNode(next) {
+    this.nextNode = next;
   }
-
-  set index(index) {
-    this.index = index;
-  }
-
   
 }
+
+export  { Node };
